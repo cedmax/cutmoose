@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Oswald';
-  font-weight: 200;
+  font-weight: 300;
   margin: 0;
   padding: 0
 }
@@ -18,29 +18,51 @@ p {
 
 em {
   font-style: italic;
-  font-weight: 300
+  font-weight: 200
 }
 
-h1,h2,h3 {
+h1, h2, h3 {
   font-weight: 500
 }
 
-h1 {
+h1, h2 {
   font-size: 114px;
   line-height: 1.2;
   margin-bottom: 0;
-  text-transform: uppercase
+}
+
+h1 {
+  text-transform: uppercase  
+}
+
+h2 {
+  font-size: 50px;  
+}
+
+@media (min-width: 690px) and (max-width: 1280px) {
+  h2 {
+    font-size: 40px;  
+  }
 }
 
 @media (min-width: 470px) and (max-width: 690px) {
   h1 {
     font-size: 90px
   }
+
+  h2 {
+    font-size: 30px;  
+  }
 }
+
 
 @media (max-width: 470px) {
   h1 {
     font-size: 65px
+  }
+
+  h2 {
+    font-size: 30px;  
   }
 }
 
@@ -48,24 +70,33 @@ h2,h3 {
   margin-bottom: 10px
 }
 
-h2 {
+h3 {
   font-size: 22px;
   font-weight: 200;
   letter-spacing: 2px;
   margin: 20px 0 36px
 }
 
-h3 {
+h4 {
   font-size: 22px
 }
 
-aside h3 {
+aside h4 {
   font-size: 18px;
   margin-bottom: 0
 }
 
-p,em {
+p, em {
   font-size: 18px;
+}
+
+figure {
+  padding: 0 2rem 0 0;
+}
+
+figcaption {
+  display: block;
+  text-align: right;
 }
 
 .container {
@@ -153,6 +184,10 @@ footer span:hover span,footer span:hover a {
 
 aside {
   text-align: center
+}
+
+aside a {
+  display: block;
 }
 
 .logo {
