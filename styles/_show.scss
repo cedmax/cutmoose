@@ -1,0 +1,18 @@
+.show {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $magic-number / 2;
+}
+
+.show-figure {
+  margin-right: 1em;
+}
+
+.show-body {
+  flex: 1;
+}
+
+.show-fine-prints {
+  font-size: 80%
+}
+
