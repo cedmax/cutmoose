@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.12.1",
+    "eslint-plugin-react": "^7.5.1",
+    "http-server": "^0.10.0",
+    "marked": "^0.3.7",
+    "node-sass": "^4.7.2",
+    "node-version-assets": "^1.2.2",
+    "prismic.io": "^3.6.1",
+    "static-react": "^3.2.0",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "start": "watch 'yarn generate' src/ & watch 'yarn generate' tmp/ & watch 'yarn sass' styles/ & http-server dist -s -o",
+    "build": "yarn content && yarn generate && yarn sass && cp ./favicon.ico ./dist/ && yarn version",
+    "content": "node ./scripts/fetch-content",
+    "sass": "node-sass --output-style compressed ./styles/main.scss ./dist/style.css && rm -f ./npm-debug.log*",
+    "generate": "mkdir -p dist && static-react ./src/index.js > ./dist/index.html",
+    "version": "node ./scripts/version"
+  },
+  "dependencies": {
+    "contentful-static": "^1.4.2",
+    "image-downloader": "^3.3.0"
+  }
+}
