@@ -5,7 +5,7 @@ export default {
     title: 'React Static',
   }),
   getRoutes: async () => {
-    const { projects, metadata: metadataArr, artists } = require('./src/content/en-Gb.json')
+    const { projects, metadata: metadataArr, artists } = require('./src/content/en-GB.json')
     const metadata = metadataArr[0]
 
     return [
