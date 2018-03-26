@@ -8,7 +8,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "content": "node ./scripts/fetch-content"
+    "postinstall": "node ./scripts/fetch-content"
   },
   "dependencies": {
     "marked": "^0.3.18",
