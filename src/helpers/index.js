@@ -1,7 +1,10 @@
-import marked from "marked/index";
+import marked from 'marked/index'
 
-export function injectHTML(text) {
+export function markdown (text) {
   return {
-    __html: marked(text || '')
-  };
+    __html:
+      text instanceof Array
+        ? marked(text.join('\n\n') || '')
+        : marked(text || '')
+  }
 }

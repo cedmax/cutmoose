@@ -21,7 +21,7 @@ em {
   font-weight: 200
 }
 
-h1, h2, h3 {
+h1, h2, h3, header p, strong {
   font-weight: 500
 }
 
@@ -66,11 +66,11 @@ h2 {
   }
 }
 
-h2,h3 {
+h2,h3, header p {
   margin-bottom: 10px
 }
 
-h3 {
+h3, header p {
   font-size: 22px;
   font-weight: 200;
   letter-spacing: 2px;
@@ -178,8 +178,14 @@ a {
   color: #000
 }
 
-footer span:hover span,footer span:hover a {
+
+footer p:hover span,footer p:hover a {
   color: #c00
+}
+
+footer p + p {
+  margin-bottom: 0;
+  font-size: 16px;
 }
 
 aside {
