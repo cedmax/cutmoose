@@ -1,10 +1,10 @@
-## ursamaior.net
+# React-Static - Basic Example
 
-Development:
-`npm run watch` 
+This example is the most basic version of react-static available. It includes:
+- Babel
+- CSS imports
+- Image imports
+- File imports
+- Automatic Routing
 
-Build:
-`npm run build`
-
-Build:
-`npm run build`
+To get started, run `react-static create` and use the `basic` template.
