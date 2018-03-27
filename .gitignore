@@ -1,6 +1,9 @@
 # dependencies
 /node_modules
-/src/content
+/src/content/*
+!/src/content/images
+/src/content/images/*
+
 # testing
 /coverage
 
