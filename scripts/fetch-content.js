@@ -1,8 +1,7 @@
 /* eslint-disable no-restricted-syntax, no-await-in-loop */
 
-require('dotenv').config();
-const _ = require('lodash');
-const fs = require('fs');
+require('dotenv').config()
+const fs = require('fs')
 const download = require('image-downloader')
 const contentfulStatic = require('contentful-static')
 
