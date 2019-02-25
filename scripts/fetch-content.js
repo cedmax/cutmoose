@@ -6,14 +6,14 @@ const download = require('image-downloader')
 const contentfulStatic = require('contentful-static')
 
 const save = (data, lang) =>
-  fs.writeFileSync(
-    `./src/content/${lang}.json`,
-    JSON.stringify(data, null, 4),
-    { encoding: 'UTF-8' }
-  )
+  fs.writeFileSync(`./src/content/${lang}.json`, JSON.stringify(data, null, 4), {
+    encoding: 'UTF-8'
+  })
 
 const destructureImg = image => {
-  const { file: { url, fileName } } = image
+  const {
+    file: { url, fileName }
+  } = image
   return { url, fileName }
 }
 
@@ -58,6 +58,8 @@ function sync (space, accessToken) {
           item.fields.image = item.fields.image.fields
           return item.fields
         })
+        .sort((a, b) => a.order - b.order)
+
       const metadata = content
         .filter(item => item.sys.contentType.sys.id === 'metadata')
         .map(item => item.fields)
@@ -79,7 +81,4 @@ function sync (space, accessToken) {
   })
 }
 
-sync(
-  process.env.CONTENTFUL_SPACE,
-  process.env.CONTENTFUL_KEY
-)
+sync(process.env.CONTENTFUL_SPACE, process.env.CONTENTFUL_KEY)
