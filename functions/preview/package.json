@@ -1,0 +1,9 @@
+{
+  "name": "preview",
+  "version": "1.0.0",
+  "main": "preview.js",
+  "license": "MIT",
+  "dependencies": {
+    "@tryghost/admin-api": "^1.3.5"
+  }
+}
