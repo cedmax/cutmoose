@@ -1,3 +1,0 @@
-RewriteEngine on
-RewriteRule ^point-de-fuite\.html$ /point-de-fuite/ [L,R=301]
-RewriteRule ^oh-dear-me\.html$ /oh-dear-me/ [L,R=301]
