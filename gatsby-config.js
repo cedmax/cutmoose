@@ -104,6 +104,30 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        // 1 query for each data type
+        query: `
+            {
+                allGhostPost {
+                    edges {
+                        node {
+                            id
+                            slug
+                            updated_at
+                            feature_image
+                        }
+                    }
+                }
+              }`,
+        mapping: {
+          allGhostPost: {
+            sitemap: 'posts',
+          },
+        },
+      },
+    },
     /**
      *  Utility Plugins
      */
