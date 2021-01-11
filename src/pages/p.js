@@ -2,14 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Router } from '@reach/router'
 import Post from '../templates/post'
-import Rehype from 'rehype'
-
-const rehype = new Rehype().data(`settings`, {
-  fragment: true,
-  space: 'html',
-  emitParseErrors: true,
-  verbose: false,
-})
 
 class PreviewPage extends React.Component {
   constructor(props) {
@@ -23,10 +15,6 @@ class PreviewPage extends React.Component {
       const post = await fetch(`/preview?id=${this.props.uuid}`).then(response =>
         response.json(),
       )
-
-      const htmlAst = await rehype().parse(post.html)
-      post.childHtmlRehype = { htmlAst: htmlAst }
-      post.localImage = { publicURL: post.feature_image }
 
       if (post) {
         this.setState({ post })
@@ -45,7 +33,15 @@ class PreviewPage extends React.Component {
       }
 
       const location = this.props.location
-      return <Post data={data} location={location} />
+      return (
+        <Post
+          data={{
+            post: { edges: [{ node: this.state.post }] },
+            news: { edges: [] },
+          }}
+          location={location}
+        />
+      )
     }
     return null
   }
