@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,500');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Oswald';
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 2;
+}
+
+p {
+  margin-bottom: 24px;
+}
+
+em {
+  font-style: italic;
+  font-weight: 200;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+header p,
+strong {
+  font-weight: 500;
+}
+
+h1,
+h2 {
+  font-size: 114px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+@media (min-width: 690px) and (max-width: 1280px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 470px) and (max-width: 690px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 470px) {
+  h1 {
+    font-size: 65px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+h2,
+header p {
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 22px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin: 20px 0 36px;
+}
+
+h3,
+h4 {
+  font-size: 22px;
+}
+
+aside h4 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+p,
+em {
+  font-size: 18px;
+}
+
+figure {
+  padding: 0 0 24px 0;
+}
+
+figcaption {
+  display: block;
+  text-align: right;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 140px 0 80px;
+  position: relative;
+  width: 85%;
+}
+
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 691px) and (max-width: 1000px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 690px) {
+  .container {
+    max-width: 420px;
+    padding-top: 80px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row_inverse {
+  flex-direction: row-reverse;
+}
+
+.col {
+  flex: 0 0 100%;
+  transition: all 0.27s ease-out;
+}
+
+@media (min-width: 690px) {
+  .col_2third {
+    flex-basis: 65%;
+  }
+
+  .col_half {
+    flex-basis: 48%;
+  }
+
+  .col_1third {
+    flex-basis: 33%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .col {
+    flex-basis: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 690px) {
+  .col {
+    margin-bottom: 24px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 24px;
+  line-height: 1.2;
+}
+
+a {
+  color: #000;
+}
+
+footer p:hover span,
+footer p:hover a {
+  color: #c00;
+}
+
+footer p + p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+aside {
+  text-align: center;
+}
+
+aside a {
+  display: block;
+}
+
+.logo {
+  width: 100%;
+  margin-bottom: 24px;
+}
