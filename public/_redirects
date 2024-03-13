@@ -1,1 +1,6 @@
 /content/* https://admin.cutmoose.com/content/:splat 301!
+/assets/* https://admin.cutmoose.com/assets/:splat 301!
+/private/* https://admin.cutmoose.com/private/:splat 200
+/ghost/* https://admin.cutmoose.com/ghost/:splat 200
+/preview /.netlify/functions/preview    200
+/feed /rss 301!
